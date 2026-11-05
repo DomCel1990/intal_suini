@@ -158,7 +158,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
       'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
     description:
       'Pancetta arrotolata dolce e morbida, dal sapore avvolgente e raffinato. Lenta stagionatura e speziatura delicata.',
-    pairing: 'Fichi freschi, grissini artigianali e bollicine.',
+    pairing: 'Fichi freschi accompagnati a grissini artigianali e bollicine.',
     recipe: {
       title: 'Involtini di Poppea con Fichi e Caprino',
       basePortions: 4,
@@ -236,7 +236,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
       'https://images.unsplash.com/photo-1592417817098-8f3d6eb231fc?auto=format&fit=crop&w=800&q=80',
     description:
       'Lavorata in budello naturale, sapore aromatico e leggermente speziato che evoca le antiche norcinerie romane.',
-    pairing: 'Vini rossi leggeri, focacce morbide.',
+    pairing: 'Vini rossi leggeri e fruttati, focacce morbide profumate all\'olio EVO.',
     recipe: {
       title: 'Focaccia Calda con Minutilla Tradizionale',
       basePortions: 4,
@@ -312,7 +312,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
       'https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?auto=format&fit=crop&w=800&q=80',
     description:
       'Lenta e naturale stagionatura. Gusto morbido e profumato con un abbraccio di spezie delicate.',
-    pairing: 'Vini bianchi strutturati, burro salato su crostini.',
+    pairing: 'Vini bianchi strutturati, accompagnato da crostini di pane e burro salato.',
     recipe: {
       title: 'Crostini al Burro Salato e Lonzino Valerio',
       basePortions: 4,
