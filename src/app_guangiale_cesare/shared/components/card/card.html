@@ -1,0 +1,51 @@
+<div
+  class="bg-luxury-card rounded-2xl luxury-glow-card flex flex-col justify-between overflow-hidden group"
+>
+  <!-- Contenitore immagine senza bordi interni sovrapposti -->
+  <div class="relative h-48 w-full overflow-hidden bg-black">
+    <img
+      [src]="product()?.imageUrl"
+      [alt]="product()?.name"
+      class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
+    />
+    <!-- Sfumatura unita senza stacchi -->
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-luxury-card via-transparent to-black/30"
+    ></div>
+
+    <span
+      class="absolute top-3 left-3 text-[10px] uppercase font-bold tracking-widest text-amber-300 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-amber-500/30 font-mono shadow"
+    >
+      {{product()?.category}}
+    </span>
+  </div>
+
+  <div class="p-6 pt-2 space-y-4 flex-1 flex flex-col justify-between">
+    <div class="space-y-2">
+      <h4
+        class="text-xl font-cinzel font-bold text-white group-hover:text-amber-300 transition-colors"
+      >
+        {{product()?.name}}
+      </h4>
+      <p class="text-base text-amber-400/90 italic font-playfair">
+        {{product()?.subtitle}}
+      </p>
+      <p class="text-base text-gray-400 leading-relaxed line-clamp-3">
+        {{product()?.description}}
+      </p>
+    </div>
+
+    <div class="pt-4 border-t border-amber-500/10 space-y-3">
+      <div class="text-[12px] text-gray-400">
+        <strong class="text-amber-400 font-cinzel">Abbinamento:</strong>
+        {{product()?.pairing}}
+      </div>
+      <button
+        (click)="state.openModal(product()!.id)"
+        class="w-full py-3 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 shadow"
+      >
+        <i class="fa-solid fa-calculator"></i> Ricetta & Calcola Dosi
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+@if (state.isModalOpen()) {
+      <div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto animate-fadeIn">
+        <div class="max-w-3xl w-full bg-luxury-card border border-amber-500/40 text-gray-100 rounded-2xl p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl">
+            
+            <button (click)="state.closeModal()" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-black/60 hover:bg-amber-500 hover:text-black border border-amber-500/40 flex items-center justify-center text-amber-400 text-xl transition shadow-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="space-y-6">
+                <!-- IMMAGINE HEADER MODALE -->
+                <div class="relative h-48 sm:h-56 -mx-6 sm:-mx-8 -mt-6 sm:-mt-8 rounded-t-2xl overflow-hidden bg-black">
+                    <img [src]="product().imageUrl" [alt]="product().name" class="w-full h-full object-cover opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-luxury-card via-transparent to-black/40"></div>
+                    
+                    <div class="absolute bottom-4 left-6 right-6">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-amber-300 bg-black/60 border border-amber-500/40 px-3 py-1 rounded-full font-mono">
+                            {{product().category}} • {{product().tag}}
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-bold font-cinzel text-white mt-2 drop-shadow-md">
+                            {{product().recipe.title}}
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- DESCRIZIONE PRODOTTO -->
+                <div>
+                    <p class="text-xs text-amber-400 font-semibold italic">{{product().subtitle}}</p>
+                    <p class="text-xs text-gray-300 mt-1 leading-relaxed">{{product().description}}</p>
+                </div>
+
+                <!-- CONTROLLO PORZIONI -->
+                <div class="bg-black/60 border border-amber-500/20 p-4 rounded-xl space-y-3 shadow-inner">
+                    <label class="text-xs font-bold uppercase tracking-wider block">Regola Porzioni per i tuoi Ospiti:</label>
+                    <div class="flex items-center gap-2">
+                        <button (click)="state.adjustServings(-1)" class="w-10 h-10 rounded-xl bg-gray-800 text-amber-400 border border-gray-700 font-bold text-lg flex items-center justify-center transition shadow hover:bg-amber-500 hover:text-black">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+
+                        <input type="number" [value]="state.currentServings()" (input)="onInputServings($event)" 
+                               class="w-24 h-10 bg-black text-amber-400 border border-amber-500/40 rounded-xl text-center font-bold text-lg focus:outline-none focus:border-amber-400 shadow-inner">
+
+                        <button (click)="state.adjustServings(1)" class="w-10 h-10 rounded-xl bg-gray-800 text-amber-400 border border-gray-700 font-bold text-lg flex items-center justify-center transition shadow hover:bg-amber-500 hover:text-black">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                        <div class="flex gap-1 ml-auto">
+                            <button (click)="state.setServings(2)" class="px-2.5 py-1 bg-gray-800 text-gray-300 rounded text-xs font-bold shadow-sm hover:bg-gray-700">2</button>
+                            <button (click)="state.setServings(4)" class="px-2.5 py-1 bg-gray-800 text-gray-300 rounded text-xs font-bold shadow-sm hover:bg-gray-700">4</button>
+                            <button (click)="state.setServings(8)" class="px-2.5 py-1 bg-gray-800 text-gray-300 rounded text-xs font-bold shadow-sm hover:bg-gray-700">8</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INGREDIENTI -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-sm uppercase tracking-wider border-b border-amber-500/20 text-amber-300 pb-2">
+                        Ingredienti Necessari Calcolati
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                        @for (ing of product().recipe.ingredients; track ing.name) {
+                            <div class="p-3 rounded-xl flex justify-between items-center bg-gray-900 border border-gray-800 shadow-sm">
+                                <span>{{ing.name}}</span>
+                                <strong class="text-amber-400 font-mono text-sm">
+                                    {{ calculateQty(ing.baseQty) }} {{ing.unit}}
+                                </strong>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- PREPARAZIONE -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-sm uppercase tracking-wider border-b border-amber-500/20 text-amber-300 pb-2">
+                        Preparazione Passaggio per Passaggio
+                    </h4>
+                    <ol class="space-y-2 text-xs leading-relaxed">
+                        @for (step of product().recipe.steps; track step; let idx = $index) {
+                            <li class="flex gap-3 p-3 rounded-xl bg-black/30 border border-transparent">
+                                <span class="font-bold font-mono px-2.5 py-0.5 rounded-lg bg-amber-500/20 text-amber-400 h-fit">{{idx + 1}}</span>
+                                <span>{{step}}</span>
+                            </li>
+                        }
+                    </ol>
+                </div>
+            </div>
+        </div>
+      </div>
+    }

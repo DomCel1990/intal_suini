@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Qui sotto ci vanno le tue classi custom che avevamo prima */
+.luxury-gradient-text {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F3E5AB 40%, #D4AF37 75%, #AA7C11 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Effetto Glow e Bordo Dorato Avanzato per la Timeline e le Card */
+.luxury-glow-card {
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    box-shadow: 0 0 20px -5px rgba(212, 175, 55, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.luxury-glow-card:hover {
+    border-color: rgba(212, 175, 55, 0.9);
+    box-shadow: 0 0 35px 5px rgba(212, 175, 55, 0.35), inset 0 0 15px rgba(212, 175, 55, 0.15);
+}

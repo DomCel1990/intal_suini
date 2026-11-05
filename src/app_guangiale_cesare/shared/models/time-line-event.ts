@@ -3,4 +3,5 @@ export interface TimelineEvent {
   title: string;
   desc: string;
   badge: string;
+  imageUrl: string;
 }

@@ -3,29 +3,33 @@ import { TimelineEvent } from '../models/time-line-event';
 
 export const TIMELINE_EVENTS: TimelineEvent[] = [
   {
-    year: '1978',
-    title: 'Nascita di Italsuini S.r.l.',
-    desc: 'Fondata nel cuore dell’Italia...',
-    badge: 'Origine Filiera',
+    year: '1999',
+    badge: 'Il Primo Passo',
+    title: 'Le Radici di Italsuini',
+    desc: 'Tutto nasce da un sogno e da un profondo rispetto per la nostra terra. Quando le porte di Italsuini si aprono per la prima volta, non stiamo solo fondando un\'azienda: stiamo facendo una promessa. Quella di selezionare le carni più nobili con la stessa cura, etica e dedizione di una volta.',
+    imageUrl: 'images/storia_1.jpg'
   },
   {
-    year: '1995',
-    title: 'L’Arte della Stagionatura',
-    desc: 'Integrazione dei metodi...',
-    badge: 'Maestria Norcina',
+    year: '2003',
+    badge: 'Arte Norcina',
+    title: 'Il Tempo e la Pazienza',
+    desc: 'L\'eccellenza richiede attesa. Iniziamo la produzione dei nostri primi stagionati, lasciando che il tempo, il sale e l\'aria fresca facciano il loro lavoro. Le antiche ricette del territorio prendono vita nelle nostre cantine, portando alla luce sapori autentici e indimenticabili.',
+    imageUrl: 'images/storia_2.jpg'
   },
   {
-    year: '2010',
-    title: 'Nascita Brand "Guanciale Cesare"',
-    desc: 'Nasce il marchio dedicato...',
-    badge: 'Brand Guanciale Cesare',
+    year: '2024',
+    badge: 'Il Capolavoro',
+    title: 'La Nascita di Cesare',
+    desc: 'Dopo venticinque anni di esperienza, presentiamo il nostro capolavoro. Nasce "Cesare", un omaggio devoto a Roma e al re indiscusso della sua cucina: il guanciale. Non un semplice prodotto, ma il cuore pulsante e croccante dell\'alta ristorazione.',
+    imageUrl: 'images/storia_3.jpg' // Immagine: Dettaglio lussuoso di salumi tagliati
   },
   {
     year: '2026',
-    title: 'Eccellenza e Digital Refactoring',
-    desc: 'Rinnovamento dell’identità...',
-    badge: 'Innovazione',
-  },
+    badge: 'L\'Eredità',
+    title: 'L\'Eccellenza Senza Tempo',
+    desc: 'La nostra storia continua. Con la stessa passione di chi ha iniziato, vestiamo la nostra tradizione di una nuova eleganza digitale. "Cesare" è ormai un simbolo, pronto a portare il gusto autentico della vera norcineria verso nuovi e ambiziosi orizzonti.',
+    imageUrl: 'images/storia_4.jpg' // Immagine: Alta ristorazione / Piatto elegante
+  }
 ];
 
 // Inserisci qui l'intero oggetto productsData dal file originale, tipizzandolo
@@ -226,7 +230,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     catKey: 'salsicce',
     category: 'Le Salsicce',
     name: 'Minutilla',
-    subtitle: 'Salsiccia Piccola Stagionata',
+    subtitle: 'Salsiccia tipo Siena',
     tag: 'Salsicce',
     imageUrl:
       'https://images.unsplash.com/photo-1592417817098-8f3d6eb231fc?auto=format&fit=crop&w=800&q=80',
@@ -323,30 +327,30 @@ export const PRODUCTS_DATA: Record<string, Product> = {
       ],
     },
   },
-  cornelia: {
-    id: 'cornelia',
-    catKey: 'stagionati',
-    category: 'Gli Stagionati',
-    name: 'Cornelia',
-    subtitle: 'Bresaola Bovina di Alta Selezione',
-    tag: 'Stagionati',
-    imageUrl:
-      'https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=800&q=80',
-    description:
-      'Carne bovina selezionata stagionata con aromi naturali. Colore rosso intenso, aroma vellutato e delicato.',
-    pairing: 'Olio al tartufo, formaggio di capra fresco, noci.',
-    recipe: {
-      title: 'Insalatina Gourmet di Cornelia con Citronette',
-      basePortions: 4,
-      ingredients: [
-        { name: 'Bresaola Cornelia', baseQty: 180, unit: 'g' },
-        { name: 'Valeriana / Soncino', baseQty: 100, unit: 'g' },
-        { name: 'Gherigli di Noce', baseQty: 40, unit: 'g' },
-      ],
-      steps: [
-        'Creare un letto di valeriana e noci.',
-        'Adagiare le fette di Bresaola Cornelia e condire con citronette.',
-      ],
-    },
-  },
+  // cornelia: {
+  //   id: 'cornelia',
+  //   catKey: 'stagionati',
+  //   category: 'Gli Stagionati',
+  //   name: 'Cornelia',
+  //   subtitle: 'Bresaola Bovina di Alta Selezione',
+  //   tag: 'Stagionati',
+  //   imageUrl:
+  //     'https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=800&q=80',
+  //   description:
+  //     'Carne bovina selezionata stagionata con aromi naturali. Colore rosso intenso, aroma vellutato e delicato.',
+  //   pairing: 'Olio al tartufo, formaggio di capra fresco, noci.',
+  //   recipe: {
+  //     title: 'Insalatina Gourmet di Cornelia con Citronette',
+  //     basePortions: 4,
+  //     ingredients: [
+  //       { name: 'Bresaola Cornelia', baseQty: 180, unit: 'g' },
+  //       { name: 'Valeriana / Soncino', baseQty: 100, unit: 'g' },
+  //       { name: 'Gherigli di Noce', baseQty: 40, unit: 'g' },
+  //     ],
+  //     steps: [
+  //       'Creare un letto di valeriana e noci.',
+  //       'Adagiare le fette di Bresaola Cornelia e condire con citronette.',
+  //     ],
+  //   },
+  // },
 };
