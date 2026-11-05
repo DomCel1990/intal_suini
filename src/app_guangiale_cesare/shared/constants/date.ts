@@ -1,0 +1,352 @@
+import { Product } from '../models/product';
+import { TimelineEvent } from '../models/time-line-event';
+
+export const TIMELINE_EVENTS: TimelineEvent[] = [
+  {
+    year: '1978',
+    title: 'Nascita di Italsuini S.r.l.',
+    desc: 'Fondata nel cuore dell’Italia...',
+    badge: 'Origine Filiera',
+  },
+  {
+    year: '1995',
+    title: 'L’Arte della Stagionatura',
+    desc: 'Integrazione dei metodi...',
+    badge: 'Maestria Norcina',
+  },
+  {
+    year: '2010',
+    title: 'Nascita Brand "Guanciale Cesare"',
+    desc: 'Nasce il marchio dedicato...',
+    badge: 'Brand Guanciale Cesare',
+  },
+  {
+    year: '2026',
+    title: 'Eccellenza e Digital Refactoring',
+    desc: 'Rinnovamento dell’identità...',
+    badge: 'Innovazione',
+  },
+];
+
+// Inserisci qui l'intero oggetto productsData dal file originale, tipizzandolo
+export const PRODUCTS_DATA: Record<string, Product> = {
+  guanciale: {
+    id: 'guanciale',
+    catKey: 'guanciale',
+    category: 'Guanciale Cesare',
+    name: 'Guanciale Cesare Tradizionale',
+    subtitle: 'Il Cuore della Tradizione Romana',
+    tag: 'Prodotto Eroe',
+    imageUrl:
+      'https://images.unsplash.com/photo-1608755728617-aefab37d2edd?auto=format&fit=crop&w=800&q=80',
+    description:
+      'Ottenuto da sole carni suine italiane selezionate della filiera Italsuini. Speziato con salagione manuale e pepatura tradizionale, stagionato lentamente per garantire la perfetta marezzatura croccante in cottura.',
+    pairing:
+      'Vini rossi strutturati laziali (Cesanese del Piglio), Primi piatti della tradizione romana.',
+    recipe: {
+      title: 'La Vera Spaghetti alla Carbonara',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Guanciale Cesare', baseQty: 150, unit: 'g' },
+        { name: 'Spaghetti di Gragnano', baseQty: 320, unit: 'g' },
+        { name: 'Tuorli d’Uovo Freschi', baseQty: 4, unit: 'pz' },
+        { name: 'Pecorino Romano DOP', baseQty: 80, unit: 'g' },
+        { name: 'Pepe Nero in Grani', baseQty: 5, unit: 'g' },
+      ],
+      steps: [
+        'Tagliare il Guanciale Cesare a listarelle di circa 1cm di spessore.',
+        'Rosolare il guanciale in una padella antiaderente a fuoco dolce finché il grasso diventa trasparente e dorato.',
+        'Conservare il grasso fuso e far intiepidire le fette croccanti.',
+        "Sbattere i tuorli d'uovo con il Pecorino Romano e un cucchiaio di grasso fuso fino a creare una crema densa.",
+        'Scolare la pasta al dente e mantecare a fuoco spento con la crema di tuorli e il guanciale croccante.',
+      ],
+    },
+  },
+  tiberio: {
+    id: 'tiberio',
+    catKey: 'salami',
+    category: 'Il Salame',
+    name: 'Tiberio',
+    subtitle: 'Salame Artigianale Speziato',
+    tag: 'Salami',
+    imageUrl:
+      'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
+    description:
+      'Equilibrio perfetto di sapori: la dolcezza della carne si unisce alla giusta sapidità e a un leggero sentore di spezie. Consistenza morbida e profumo intenso.',
+    pairing: 'Pane casereccio caldo e calice di rosso corposo.',
+    recipe: {
+      title: 'Tagliere Imperiale Tiberio con Pane e Miele',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Salame Tiberio Cesare', baseQty: 200, unit: 'g' },
+        { name: 'Pane Casereccio di Lariano', baseQty: 300, unit: 'g' },
+        { name: 'Miele di Castagno', baseQty: 50, unit: 'g' },
+        { name: 'Noci Sgusciate', baseQty: 40, unit: 'g' },
+      ],
+      steps: [
+        'Affettare il salame Tiberio con un taglio leggermente obliquo.',
+        'Tostare le fette di pane casereccio sulla piastra.',
+        'Disporre il salame a raggiera arricchendo con noci e un filo di miele.',
+      ],
+    },
+  },
+  mecenate: {
+    id: 'mecenate',
+    catKey: 'salami',
+    category: 'Il Salame',
+    name: 'Mecenate',
+    subtitle: 'Salume Spalmabile tipo Ciauscolo',
+    tag: 'Salami',
+    imageUrl:
+      'https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format&fit=crop&w=800&q=80',
+    description:
+      'Ispirato alla tradizione del ciauscolo, Mecenate si distingue per la sua consistenza cremosa e spalmabile su fette di pane caldo.',
+    pairing: 'Crostini caldi, spumanti metodo classico o birre artigianali.',
+    recipe: {
+      title: 'Bruschette Veloci Mecenate e Stracchino',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Salume Spalmabile Mecenate', baseQty: 180, unit: 'g' },
+        { name: 'Stracchino Fresco', baseQty: 100, unit: 'g' },
+        { name: 'Pane per Bruschetta', baseQty: 8, unit: 'fette' },
+      ],
+      steps: [
+        'Grigliare le fette di pane calde.',
+        'Spalmare abbondante salume Mecenate mentre il pane è fumante.',
+        'Completare con un fiocco di stracchino fresco.',
+      ],
+    },
+  },
+  flaminia: {
+    id: 'flaminia',
+    catKey: 'salami',
+    category: 'Il Salame',
+    name: 'Flaminia',
+    subtitle: 'Salame Artigianale tipo Corallina',
+    tag: 'Salami',
+    imageUrl:
+      'https://images.unsplash.com/photo-1593504049359-74330189a345?auto=format&fit=crop&w=800&q=80',
+    description:
+      'La tipica corallina della tradizione laziale. Macinatura fine con caratteristici cubetti di lardo magro e compatto dal gusto profumato.',
+    pairing: 'Pizza di Pasqua salata, caciotta fresca e vino bianco Frascati.',
+    recipe: {
+      title: 'Aperitivo Tradizionale con Flaminia e Caciotta',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Salame Corallina Flaminia', baseQty: 220, unit: 'g' },
+        { name: 'Caciotta Fresca Romana', baseQty: 150, unit: 'g' },
+        { name: 'Pane o Pizza Salata', baseQty: 250, unit: 'g' },
+      ],
+      steps: [
+        'Tagliare la Corallina Flaminia a fette di 3-4 mm.',
+        'Accompagnare con caciotta a cubetti e fette di pane fragrante.',
+      ],
+    },
+  },
+  poppea: {
+    id: 'poppea',
+    catKey: 'pancetta',
+    category: 'La Pancetta',
+    name: 'Poppea',
+    subtitle: 'Pancetta Arrotolata Elegante',
+    tag: 'Pancetta',
+    imageUrl:
+      'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    description:
+      'Pancetta arrotolata dolce e morbida, dal sapore avvolgente e raffinato. Lenta stagionatura e speziatura delicata.',
+    pairing: 'Fichi freschi, grissini artigianali e bollicine.',
+    recipe: {
+      title: 'Involtini di Poppea con Fichi e Caprino',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Pancetta Arrotolata Poppea', baseQty: 160, unit: 'g' },
+        { name: 'Fichi Freschi', baseQty: 4, unit: 'pz' },
+        { name: 'Formaggio Caprino', baseQty: 100, unit: 'g' },
+      ],
+      steps: [
+        'Tagliare i fichi in 4 spicchi.',
+        'Avvolgere ogni spicchio con una fetta di pancetta Poppea ed un tocco di caprino.',
+      ],
+    },
+  },
+  minerva: {
+    id: 'minerva',
+    catKey: 'pancetta',
+    category: 'La Pancetta',
+    name: 'Minerva',
+    subtitle: 'Pancetta Tesa Stagionata',
+    tag: 'Pancetta',
+    imageUrl:
+      'https://images.unsplash.com/photo-1621996346565-e3d5d6281270?auto=format&fit=crop&w=800&q=80',
+    description:
+      'Equilibrio perfetto tra magro e grasso con marezzatura elegante. Sapore intenso con note speziate delicate.',
+    pairing: 'Pane di grano duro, formaggi stagionati, utilizzi gourmet.',
+    recipe: {
+      title: 'Crostino di Pane e Minerva Croccante',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Pancetta Tesa Minerva', baseQty: 150, unit: 'g' },
+        { name: 'Pane di Altamura', baseQty: 4, unit: 'fette' },
+        { name: 'Miele di Millefiori', baseQty: 30, unit: 'g' },
+      ],
+      steps: [
+        'Scaldare le fette di pancetta Minerva in padella calda per 1 minuto.',
+        'Adagiare sul pane e guarnire con gocce di miele.',
+      ],
+    },
+  },
+  domina: {
+    id: 'domina',
+    catKey: 'salsicce',
+    category: 'Le Salsicce',
+    name: 'Domina',
+    subtitle: 'Salsiccia Stagionata Selezione',
+    tag: 'Salsicce',
+    imageUrl:
+      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80',
+    description:
+      'Salsiccia stagionata in condizioni ideali per un sapore intenso, compatto e speziato al punto giusto.',
+    pairing: 'Pecorino stagionato, taralli, aperitivi di carattere.',
+    recipe: {
+      title: 'Sotto-Olio di Salsiccia Domina con Erbe',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Salsiccia Stagionata Domina', baseQty: 200, unit: 'g' },
+        { name: "Olio Extravergine d'Oliva", baseQty: 50, unit: 'ml' },
+        { name: 'Origano e Peperoncino', baseQty: 5, unit: 'g' },
+      ],
+      steps: [
+        'Spellare e affettare la salsiccia Domina a rondelle.',
+        "Servire condita con un filo d'olio EVOO e spezie della macchia mediterranea.",
+      ],
+    },
+  },
+  minutilla: {
+    id: 'minutilla',
+    catKey: 'salsicce',
+    category: 'Le Salsicce',
+    name: 'Minutilla',
+    subtitle: 'Salsiccia Piccola Stagionata',
+    tag: 'Salsicce',
+    imageUrl:
+      'https://images.unsplash.com/photo-1592417817098-8f3d6eb231fc?auto=format&fit=crop&w=800&q=80',
+    description:
+      'Lavorata in budello naturale, sapore aromatico e leggermente speziato che evoca le antiche norcinerie romane.',
+    pairing: 'Vini rossi leggeri, focacce morbide.',
+    recipe: {
+      title: 'Focaccia Calda con Minutilla Tradizionale',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Salsicce Minutilla', baseQty: 180, unit: 'g' },
+        { name: "Focaccia Romana all'Olio", baseQty: 250, unit: 'g' },
+      ],
+      steps: [
+        'Aprire la focaccia ancora calda dal forno.',
+        'Inserire le salsicce Minutilla tagliate a metà.',
+      ],
+    },
+  },
+  cleopatra: {
+    id: 'cleopatra',
+    catKey: 'stagionati',
+    category: 'Gli Stagionati',
+    name: 'Cleopatra',
+    subtitle: 'Lonza Magra di Qualità Superiore',
+    tag: 'Stagionati',
+    imageUrl:
+      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
+    description:
+      'Consistenza morbida e vellutata dal profumo avvolgente. Carne magra selezionata di altissima qualità della filiera Italsuini.',
+    pairing: 'Rucola fresca, scaglie di parmigiano, olio EVO e limone.',
+    recipe: {
+      title: 'Carpaccio Reale di Lonza Cleopatra con Rucola',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Lonza Cleopatra', baseQty: 200, unit: 'g' },
+        { name: 'Rucola Selvatica', baseQty: 80, unit: 'g' },
+        { name: 'Scaglie di Parmigiano', baseQty: 60, unit: 'g' },
+      ],
+      steps: [
+        'Disporre le fette di Lonza Cleopatra su un piatto grande.',
+        "Guarnire con rucola e scaglie di parmigiano con un filo d'olio.",
+      ],
+    },
+  },
+  fiammette: {
+    id: 'fiammette',
+    catKey: 'stagionati',
+    category: 'Gli Stagionati',
+    name: 'Fiammette',
+    subtitle: 'Coppiette Romane Speziate',
+    tag: 'Stagionati',
+    imageUrl:
+      'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80',
+    description:
+      "Strisce di carne suina magra e speziata con peperoncino e semi di finocchio. L'autentico snack da osteria romana.",
+    pairing: 'Birra artigianale cruda o vino rosso sfuso di Frascati.',
+    recipe: {
+      title: 'Aperitivo Rusante con Coppiette Fiammette',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Coppiette Fiammette Cesare', baseQty: 200, unit: 'g' },
+        { name: 'Pane Sciocco Tostato', baseQty: 200, unit: 'g' },
+      ],
+      steps: [
+        "Servire le Fiammette a temperatura ambiente per sprigionare l'aroma del peperoncino.",
+        'Accompagnare con pane caldo per bilanciare il sapore forte.',
+      ],
+    },
+  },
+  valerio: {
+    id: 'valerio',
+    catKey: 'stagionati',
+    category: 'Gli Stagionati',
+    name: 'Valerio',
+    subtitle: 'Lonzino Stagionato Aromatico',
+    tag: 'Stagionati',
+    imageUrl:
+      'https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?auto=format&fit=crop&w=800&q=80',
+    description:
+      'Lenta e naturale stagionatura. Gusto morbido e profumato con un abbraccio di spezie delicate.',
+    pairing: 'Vini bianchi strutturati, burro salato su crostini.',
+    recipe: {
+      title: 'Crostini al Burro Salato e Lonzino Valerio',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Lonzino Valerio', baseQty: 160, unit: 'g' },
+        { name: 'Burro Aromatizzato', baseQty: 80, unit: 'g' },
+        { name: 'Crostini di Pane Brioche', baseQty: 8, unit: 'pz' },
+      ],
+      steps: [
+        'Spalmare il burro morbido sui crostini.',
+        'Completare con una fetta adagiata di Lonzino Valerio.',
+      ],
+    },
+  },
+  cornelia: {
+    id: 'cornelia',
+    catKey: 'stagionati',
+    category: 'Gli Stagionati',
+    name: 'Cornelia',
+    subtitle: 'Bresaola Bovina di Alta Selezione',
+    tag: 'Stagionati',
+    imageUrl:
+      'https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=800&q=80',
+    description:
+      'Carne bovina selezionata stagionata con aromi naturali. Colore rosso intenso, aroma vellutato e delicato.',
+    pairing: 'Olio al tartufo, formaggio di capra fresco, noci.',
+    recipe: {
+      title: 'Insalatina Gourmet di Cornelia con Citronette',
+      basePortions: 4,
+      ingredients: [
+        { name: 'Bresaola Cornelia', baseQty: 180, unit: 'g' },
+        { name: 'Valeriana / Soncino', baseQty: 100, unit: 'g' },
+        { name: 'Gherigli di Noce', baseQty: 40, unit: 'g' },
+      ],
+      steps: [
+        'Creare un letto di valeriana e noci.',
+        'Adagiare le fette di Bresaola Cornelia e condire con citronette.',
+      ],
+    },
+  },
+};
