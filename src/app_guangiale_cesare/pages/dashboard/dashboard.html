@@ -1,54 +1,58 @@
 <!-- MAIN APP CONTAINER -->
 <div class="min-h-screen bg-[#0A0809] text-gray-200 font-sans">
   <!-- HEADER PRINCIPALE -->
-  <header
-    class="border-b border-amber-500/10 bg-[#0A0809]/95 sticky top-0 z-50 backdrop-blur-md"
-  >
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <div class="flex items-center gap-2">
-          <div class="p-1 rounded flex items-center justify-center shadow">
-            <img
-              src="logo.webp"
-              alt="Logo Italsuini"
-              class="h-16 w-auto object-contain"
-            />
-          </div>
+<header
+  class="border-b border-amber-500/20 bg-[#0A0809]/90 sticky top-0 z-50 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+    
+    <!-- Logo & Brand -->
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-3 group cursor-pointer">
+        <div class="p-1 rounded-lg bg-black/40 border border-amber-500/20 group-hover:border-amber-500/50 transition duration-300 flex items-center justify-center shadow-inner">
+          <img
+            src="logo.webp"
+            alt="Logo Italsuini"
+            class="h-14 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.3)]"
+          />
+        </div>
 
-          <div class="hidden sm:block">
-            <span class="text-[16px] text-amber-500/80">Italsuini S.r.l.</span>
-          </div>
+        <div class="hidden sm:flex flex-col">
+          <span class="text-[15px] uppercase tracking-wider text-amber-500/80 font-medium">Italsuini S.r.l.</span>
         </div>
       </div>
-
-      <nav
-        class="hidden md:flex gap-6 text-xs uppercase tracking-widest text-gray-400 font-medium"
-      >
-        <!-- <a href="#lux-hero" class="hover:text-amber-400 transition"
-          >Eccellenza</a
-        > -->
-        <a href="#lux-guanciale" class="hover:text-amber-400 transition"
-          >Cesare il Guanciale</a
-        >
-        <a href="#lux-catalog" class="hover:text-amber-400 transition"
-          >Selezione Stagionati</a
-        >
-        <a href="#lux-produzione" class="hover:text-amber-400 transition"
-          >Processo produttivo</a
-        >
-        <a href="#lux-history" class="hover:text-amber-400 transition"
-          >LA NOSTRA STORIA EROE</a
-        >
-      </nav>
-
-      <button
-        (click)="state.openModal('guanciale')"
-        class="px-4 py-2 rounded-full border border-amber-500/50 text-amber-400 text-xs tracking-wider uppercase hover:bg-amber-500 hover:text-black transition flex items-center gap-2 font-semibold shadow-md"
-      >
-        <i class="fa-solid fa-calculator"></i> Calcola Dosi
-      </button>
     </div>
-  </header>
+
+    <!-- Navigazione con effetto underline stiloso -->
+    <nav class="hidden md:flex gap-8 text-xs uppercase tracking-widest text-gray-300 font-medium">
+      <a href="#lux-guanciale" class="relative py-1 hover:text-amber-400 transition group">
+        Cesare il Guanciale
+        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-amber-600 to-amber-400 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#lux-catalog" class="relative py-1 hover:text-amber-400 transition group">
+        Selezione Stagionati
+        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-amber-600 to-amber-400 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#lux-produzione" class="relative py-1 hover:text-amber-400 transition group">
+        Processo Produttivo
+        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-amber-600 to-amber-400 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#lux-history" class="relative py-1 hover:text-amber-400 transition group">
+        La Nostra Storia
+        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-amber-600 to-amber-400 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
+
+    <!-- Bottone Call to Action Luminoso -->
+    <button
+      (click)="state.openModal('guanciale')"
+      class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-600/20 to-amber-500/20 border border-amber-500/60 text-amber-300 text-xs tracking-wider uppercase hover:bg-amber-500 hover:text-black hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300 flex items-center gap-2 font-semibold"
+    >
+      <i class="fa-solid fa-calculator"></i> Calcola Dosi
+    </button>
+
+  </div>
+</header>
 
   <!-- HERO SECTION -->
   <section
@@ -68,7 +72,7 @@
         <div
           class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-cinzel uppercase tracking-widest"
         >
-          <i class="fa-solid fa-gem"></i> Alta Salumeria Romana
+          <i class="fa-solid fa-gem"></i> L'Arte della Stagionatura Romana
         </div>
       </div>
       <h1
@@ -235,7 +239,7 @@
       <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
       <h4 class="font-cinzel text-amber-400 font-bold mb-3 uppercase tracking-wider text-sm">La Nostra Missione</h4>
       <p class="text-base sm:text-base italic font-playfair tracking-wide text-gray-300">
-        "Soddisfare le esigenze della piccola, media e grande distribuzione, mantenendo inalterata la qualità che ci ha contraddistinto nel tempo, sinonimo di garanzia italiana."[cite: 5]
+        "Soddisfare le esigenze della piccola, media e grande distribuzione, mantenendo inalterata la qualità che ci ha contraddistinto nel tempo, sinonimo di garanzia italiana."
       </p>
     </div>
   </div>
