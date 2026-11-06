@@ -4,30 +4,30 @@ import { TimelineEvent } from '../models/time-line-event';
 export const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     year: '1999',
-    badge: 'Il Primo Passo',
-    title: 'Le Radici di Italsuini',
-    desc: 'Tutto nasce da un sogno e da un profondo rispetto per la nostra terra. Quando le porte di Italsuini si aprono per la prima volta, non stiamo solo fondando un\'azienda: stiamo facendo una promessa. Quella di selezionare le carni più nobili con la stessa cura, etica e dedizione di una volta.',
+    badge: 'L\'Eredità',
+    title: 'Le Radici e la Famiglia Tiburzi',
+    desc: 'Tutto nasce dall\'esperienza lavorativa maturata dalla famiglia Tiburzi sin dai primi del \'900 nel territorio marchigiano[cite: 5]. Quando Italsuini prende forma e trasferisce la sua crescente capacità produttiva nel mercato laziale[cite: 5], non stiamo solo fondando un\'azienda: stiamo tramandando un profondo rispetto per la nostra terra e per la selezione delle carni più nobili.',
     imageUrl: 'images/storia_1.jpg'
   },
   {
     year: '2003',
     badge: 'Arte Norcina',
-    title: 'Il Tempo e la Pazienza',
-    desc: 'L\'eccellenza richiede attesa. Iniziamo la produzione dei nostri primi stagionati, lasciando che il tempo, il sale e l\'aria fresca facciano il loro lavoro. Le antiche ricette del territorio prendono vita nelle nostre cantine, portando alla luce sapori autentici e indimenticabili.',
+    title: 'Evoluzione e Pazienza',
+    desc: 'Con l\'evoluzione del mercato, abbracciamo la necessità di trasformare le carni in eccellenze preparate e confezionate, operando in spazi all\'avanguardia[cite: 5]. Inizia la delicata fase della stagionatura, dove la nostra esperienza nel dosare la giusta quantità di spezie esalta il gusto autentico delle antiche ricette[cite: 5], portando alla luce sapori indimenticabili.',
     imageUrl: 'images/storia_2.jpg'
   },
   {
     year: '2024',
     badge: 'Il Capolavoro',
     title: 'La Nascita di Cesare',
-    desc: 'Dopo venticinque anni di esperienza, presentiamo il nostro capolavoro. Nasce "Cesare", un omaggio devoto a Roma e al re indiscusso della sua cucina: il guanciale. Non un semplice prodotto, ma il cuore pulsante e croccante dell\'alta ristorazione.',
+    desc: 'Dopo decenni di dedizione, presentiamo il nostro capolavoro. Nasce "Cesare", un omaggio devoto a Roma e al re indiscusso della sua cucina: il guanciale. Non un semplice prodotto, ma il cuore pulsante dell\'alta ristorazione, creato per soddisfare le esigenze dei palati più raffinati mantenendo inalterata la nostra storica qualità[cite: 5].',
     imageUrl: 'images/storia_3.jpg' // Immagine: Dettaglio lussuoso di salumi tagliati
   },
   {
     year: '2026',
-    badge: 'L\'Eredità',
+    badge: 'La Garanzia',
     title: 'L\'Eccellenza Senza Tempo',
-    desc: 'La nostra storia continua. Con la stessa passione di chi ha iniziato, vestiamo la nostra tradizione di una nuova eleganza digitale. "Cesare" è ormai un simbolo, pronto a portare il gusto autentico della vera norcineria verso nuovi e ambiziosi orizzonti.',
+    desc: 'La nostra storia continua. Con la stessa passione di chi ha iniziato più di un secolo fa, portiamo avanti la nostra missione: essere sinonimo di garanzia italiana nel tempo[cite: 5]. "Cesare" veste la nostra tradizione di una nuova eleganza, pronto a portare il gusto autentico della vera norcineria verso orizzonti sempre più ambiziosi.',
     imageUrl: 'images/storia_4.jpg' // Immagine: Alta ristorazione / Piatto elegante
   }
 ];
@@ -42,7 +42,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Il Cuore della Tradizione Romana',
     tag: 'Prodotto Eroe',
     imageUrl:
-      'https://images.unsplash.com/photo-1608755728617-aefab37d2edd?auto=format&fit=crop&w=800&q=80',
+      'images/cards-image/guanciale.jpg',
     description:
       'Ottenuto da sole carni suine italiane selezionate della filiera Italsuini. Speziato con salagione manuale e pepatura tradizionale, stagionato lentamente per garantire la perfetta marezzatura croccante in cottura.',
     pairing:
@@ -74,7 +74,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Salame Artigianale Speziato',
     tag: 'Salami',
     imageUrl:
-      'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
+      'images/cards-image/salame_tiberio.jpg',
     description:
       'Equilibrio perfetto di sapori: la dolcezza della carne si unisce alla giusta sapidità e a un leggero sentore di spezie. Consistenza morbida e profumo intenso.',
     pairing: 'Pane casereccio caldo e calice di rosso corposo.',
@@ -102,7 +102,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Salume Spalmabile tipo Ciauscolo',
     tag: 'Salami',
     imageUrl:
-      'https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format&fit=crop&w=800&q=80',
+      'images/cards-image/salame_mecenate.jpg',
     description:
       'Ispirato alla tradizione del ciauscolo, Mecenate si distingue per la sua consistenza cremosa e spalmabile su fette di pane caldo.',
     pairing: 'Crostini caldi, spumanti metodo classico o birre artigianali.',
@@ -129,7 +129,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Salame Artigianale tipo Corallina',
     tag: 'Salami',
     imageUrl:
-      'https://images.unsplash.com/photo-1593504049359-74330189a345?auto=format&fit=crop&w=800&q=80',
+      'images/cards-image/salame_flaminia.jpg',
     description:
       'La tipica corallina della tradizione laziale. Macinatura fine con caratteristici cubetti di lardo magro e compatto dal gusto profumato.',
     pairing: 'Pizza di Pasqua salata, caciotta fresca e vino bianco Frascati.',
@@ -155,7 +155,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Pancetta Arrotolata Elegante',
     tag: 'Pancetta',
     imageUrl:
-      'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+      'images/cards-image/pancetta_poppea.jpg',
     description:
       'Pancetta arrotolata dolce e morbida, dal sapore avvolgente e raffinato. Lenta stagionatura e speziatura delicata.',
     pairing: 'Fichi freschi accompagnati a grissini artigianali e bollicine.',
@@ -181,7 +181,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Pancetta Tesa Stagionata',
     tag: 'Pancetta',
     imageUrl:
-      'https://images.unsplash.com/photo-1621996346565-e3d5d6281270?auto=format&fit=crop&w=800&q=80',
+      'images/cards-image/pancetta_minerva.jpg',
     description:
       'Equilibrio perfetto tra magro e grasso con marezzatura elegante. Sapore intenso con note speziate delicate.',
     pairing: 'Pane di grano duro, formaggi stagionati, utilizzi gourmet.',
@@ -207,7 +207,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Salsiccia Stagionata Selezione',
     tag: 'Salsicce',
     imageUrl:
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80',
+      'images/cards-image/salsiccia_domina.jpg',
     description:
       'Salsiccia stagionata in condizioni ideali per un sapore intenso, compatto e speziato al punto giusto.',
     pairing: 'Pecorino stagionato, taralli, aperitivi di carattere.',
@@ -233,7 +233,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Salsiccia tipo Siena',
     tag: 'Salsicce',
     imageUrl:
-      'https://images.unsplash.com/photo-1592417817098-8f3d6eb231fc?auto=format&fit=crop&w=800&q=80',
+      'images/cards-image/salsiccia_minutilla.jpg',
     description:
       'Lavorata in budello naturale, sapore aromatico e leggermente speziato che evoca le antiche norcinerie romane.',
     pairing: 'Vini rossi leggeri e fruttati, focacce morbide profumate all\'olio EVO.',
@@ -258,7 +258,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Lonza Magra di Qualità Superiore',
     tag: 'Stagionati',
     imageUrl:
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
+      'images/cards-image/stagionato_cleopatra.jpg',
     description:
       'Consistenza morbida e vellutata dal profumo avvolgente. Carne magra selezionata di altissima qualità della filiera Italsuini.',
     pairing: 'Rucola fresca, scaglie di parmigiano, olio EVO e limone.',
@@ -284,7 +284,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Coppiette Romane Speziate',
     tag: 'Stagionati',
     imageUrl:
-      'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80',
+     'images/cards-image/stagionato_fiammette.jpg',
     description:
       "Strisce di carne suina magra e speziata con peperoncino e semi di finocchio. L'autentico snack da osteria romana.",
     pairing: 'Birra artigianale cruda o vino rosso sfuso di Frascati.',
@@ -309,7 +309,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     subtitle: 'Lonzino Stagionato Aromatico',
     tag: 'Stagionati',
     imageUrl:
-      'https://images.unsplash.com/photo-1514944288352-fffac99f0bdf?auto=format&fit=crop&w=800&q=80',
+      'images/cards-image/stagionato_valerio.jpg',
     description:
       'Lenta e naturale stagionatura. Gusto morbido e profumato con un abbraccio di spezie delicate.',
     pairing: 'Vini bianchi strutturati, accompagnato da crostini di pane e burro salato.',
