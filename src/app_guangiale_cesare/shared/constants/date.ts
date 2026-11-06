@@ -40,7 +40,7 @@ export const PRODUCTS_DATA: Record<string, Product> = {
     category: 'Guanciale Cesare',
     name: 'Guanciale Cesare Tradizionale',
     subtitle: 'Il Cuore della Tradizione Romana',
-    tag: 'Prodotto Eroe',
+    tag: 'L\'Eccellenza',
     imageUrl:
       'images/cards-image/guanciale.jpg',
     description:
