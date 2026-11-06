@@ -6,28 +6,28 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     year: '1999',
     badge: 'L\'Eredità',
     title: 'Le Radici e la Famiglia Tiburzi',
-    desc: 'Tutto nasce dall\'esperienza lavorativa maturata dalla famiglia Tiburzi sin dai primi del \'900 nel territorio marchigiano[cite: 5]. Quando Italsuini prende forma e trasferisce la sua crescente capacità produttiva nel mercato laziale[cite: 5], non stiamo solo fondando un\'azienda: stiamo tramandando un profondo rispetto per la nostra terra e per la selezione delle carni più nobili.',
+    desc: 'Tutto nasce dall\'esperienza lavorativa maturata dalla famiglia Tiburzi sin dai primi del \'900 nel territorio marchigiano. Quando Italsuini prende forma e trasferisce la sua crescente capacità produttiva nel mercato laziale, non stiamo solo fondando un\'azienda: stiamo tramandando un profondo rispetto per la nostra terra e per la selezione delle carni più nobili.',
     imageUrl: 'images/storia_1.jpg'
   },
   {
     year: '2003',
     badge: 'Arte Norcina',
     title: 'Evoluzione e Pazienza',
-    desc: 'Con l\'evoluzione del mercato, abbracciamo la necessità di trasformare le carni in eccellenze preparate e confezionate, operando in spazi all\'avanguardia[cite: 5]. Inizia la delicata fase della stagionatura, dove la nostra esperienza nel dosare la giusta quantità di spezie esalta il gusto autentico delle antiche ricette[cite: 5], portando alla luce sapori indimenticabili.',
+    desc: 'Con l\'evoluzione del mercato, abbracciamo la necessità di trasformare le carni in eccellenze preparate e confezionate, operando in spazi all\'avanguardia. Inizia la delicata fase della stagionatura, dove la nostra esperienza nel dosare la giusta quantità di spezie esalta il gusto autentico delle antiche ricette, portando alla luce sapori indimenticabili.',
     imageUrl: 'images/storia_2.jpg'
   },
   {
     year: '2024',
     badge: 'Il Capolavoro',
     title: 'La Nascita di Cesare',
-    desc: 'Dopo decenni di dedizione, presentiamo il nostro capolavoro. Nasce "Cesare", un omaggio devoto a Roma e al re indiscusso della sua cucina: il guanciale. Non un semplice prodotto, ma il cuore pulsante dell\'alta ristorazione, creato per soddisfare le esigenze dei palati più raffinati mantenendo inalterata la nostra storica qualità[cite: 5].',
+    desc: 'Dopo decenni di dedizione, presentiamo il nostro capolavoro. Nasce "Cesare", un omaggio devoto a Roma e al re indiscusso della sua cucina: il guanciale. Non un semplice prodotto, ma il cuore pulsante dell\'alta ristorazione, creato per soddisfare le esigenze dei palati più raffinati mantenendo inalterata la nostra storica qualità.',
     imageUrl: 'images/storia_3.jpg' // Immagine: Dettaglio lussuoso di salumi tagliati
   },
   {
     year: '2026',
     badge: 'La Garanzia',
     title: 'L\'Eccellenza Senza Tempo',
-    desc: 'La nostra storia continua. Con la stessa passione di chi ha iniziato più di un secolo fa, portiamo avanti la nostra missione: essere sinonimo di garanzia italiana nel tempo[cite: 5]. "Cesare" veste la nostra tradizione di una nuova eleganza, pronto a portare il gusto autentico della vera norcineria verso orizzonti sempre più ambiziosi.',
+    desc: 'La nostra storia continua. Con la stessa passione di chi ha iniziato più di un secolo fa, portiamo avanti la nostra missione: essere sinonimo di garanzia italiana nel tempo. "Cesare" veste la nostra tradizione di una nuova eleganza, pronto a portare il gusto autentico della vera norcineria verso orizzonti sempre più ambiziosi.',
     imageUrl: 'images/storia_4.jpg' // Immagine: Alta ristorazione / Piatto elegante
   }
 ];
