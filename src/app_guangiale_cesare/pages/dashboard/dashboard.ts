@@ -13,7 +13,9 @@ import { Timeline } from '../../shared/components/timeline/timeline';
   styleUrl: './dashboard.css',
 })
 export class Dashboard {
+  isContactModalOpen = false
 state = inject(AppStateService);
+
 
   onInputServings(event: Event) {
     const input = event.target as HTMLInputElement;
@@ -26,4 +28,8 @@ state = inject(AppStateService);
         ? 'bg-gradient-to-r from-amber-600 to-amber-500 border-amber-500 text-black shadow-lg font-bold'
         : 'bg-luxury-card border-amber-500/30 text-gray-300 hover:border-amber-400 hover:text-amber-300';
   }
+
+  openContactModal () {this.isContactModalOpen = true}
+
+  closeContactModal () {this.isContactModalOpen = false}
 }

@@ -2,54 +2,68 @@
 <div class="min-h-screen bg-[#0A0809] text-gray-200 font-sans">
   <!-- HEADER PRINCIPALE -->
 <header
-  class="border-b border-amber-500/20 bg-[#0A0809]/90 sticky top-0 z-50 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+  class="sticky top-0 z-50 bg-[#0A0809]/95 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.85)] relative"
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+  <!-- 1. Luce ambientale dorata soffusa sullo sfondo (toglie l'effetto piatto) -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none"></div>
+
+  <!-- 2. Filetto superiore e inferiore metallico (riflesso di luce centrale) -->
+  <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-amber-400/60 to-transparent"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center relative z-10">
     
-    <!-- Logo & Brand -->
-    <div class="flex items-center gap-4">
-      <div class="flex items-center gap-3 group cursor-pointer">
-        <div class="p-1 rounded-lg bg-black/40 border border-amber-500/20 group-hover:border-amber-500/50 transition duration-300 flex items-center justify-center shadow-inner">
-          <img
-            src="logo.webp"
-            alt="Logo Italsuini"
-            class="h-14 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.3)]"
-          />
-        </div>
-
-        <div class="hidden sm:flex flex-col">
-          <span class="text-[15px] uppercase tracking-wider text-amber-500/80 font-medium">Italsuini S.r.l.</span>
-        </div>
+    <!-- Logo & Brand Valorizzati -->
+    <a href="#" class="flex items-center gap-4 group cursor-pointer">
+      <div class="relative p-1.5 rounded-xl bg-gradient-to-b from-amber-500/15 to-black border border-amber-400/40 group-hover:border-amber-300 transition-all duration-300 flex items-center justify-center shadow-[0_0_20px_rgba(245,158,11,0.15)] group-hover:shadow-[0_0_25px_rgba(245,158,11,0.35)]">
+        <img
+          src="logo.webp"
+          alt="Logo Italsuini"
+          class="h-14 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(251,191,36,0.45)] group-hover:scale-105 transition-transform duration-300"
+        />
       </div>
-    </div>
 
-    <!-- Navigazione con effetto underline stiloso -->
-    <nav class="hidden md:flex gap-8 text-xs uppercase tracking-widest text-gray-300 font-medium">
-      <a href="#lux-guanciale" class="relative py-1 hover:text-amber-400 transition group">
+      <div class="hidden sm:flex flex-col">
+        <!-- Testo con gradiente metallico vivo invece di colore piatto -->
+        <span class="text-base uppercase tracking-[0.2em] bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200 bg-clip-text text-transparent font-bold drop-shadow-sm">
+          Italsuini S.r.l.
+        </span>
+        <span class="text-[10px] uppercase tracking-[0.25em] text-amber-400/80 font-medium mt-0.5">
+          Eccellenza Artigianale
+        </span>
+      </div>
+    </a>
+
+    <!-- Navigazione più nitida e reattiva -->
+    <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-stone-200 font-semibold">
+      <a href="#lux-guanciale" class="relative py-2 hover:text-amber-300 transition-colors duration-300 group">
         Cesare il Guanciale
-        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-amber-600 to-amber-400 transition-all duration-300 group-hover:w-full"></span>
+        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-amber-500 via-yellow-200 to-amber-500 shadow-[0_0_10px_#fbbf24] transition-all duration-300 group-hover:w-full"></span>
       </a>
-      <a href="#lux-catalog" class="relative py-1 hover:text-amber-400 transition group">
+      <a href="#lux-catalog" class="relative py-2 hover:text-amber-300 transition-colors duration-300 group">
         Selezione Stagionati
-        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-amber-600 to-amber-400 transition-all duration-300 group-hover:w-full"></span>
+        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-amber-500 via-yellow-200 to-amber-500 shadow-[0_0_10px_#fbbf24] transition-all duration-300 group-hover:w-full"></span>
       </a>
-      <a href="#lux-produzione" class="relative py-1 hover:text-amber-400 transition group">
+      <a href="#lux-produzione" class="relative py-2 hover:text-amber-300 transition-colors duration-300 group">
         Processo Produttivo
-        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-amber-600 to-amber-400 transition-all duration-300 group-hover:w-full"></span>
+        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-amber-500 via-yellow-200 to-amber-500 shadow-[0_0_10px_#fbbf24] transition-all duration-300 group-hover:w-full"></span>
       </a>
-      <a href="#lux-history" class="relative py-1 hover:text-amber-400 transition group">
+      <a href="#lux-history" class="relative py-2 hover:text-amber-300 transition-colors duration-300 group">
         La Nostra Storia
-        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-amber-600 to-amber-400 transition-all duration-300 group-hover:w-full"></span>
+        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-amber-500 via-yellow-200 to-amber-500 shadow-[0_0_10px_#fbbf24] transition-all duration-300 group-hover:w-full"></span>
       </a>
     </nav>
 
-    <!-- Bottone Call to Action Luminoso -->
-    <button
-      (click)="state.openModal('guanciale')"
-      class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-600/20 to-amber-500/20 border border-amber-500/60 text-amber-300 text-xs tracking-wider uppercase hover:bg-amber-500 hover:text-black hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300 flex items-center gap-2 font-semibold"
-    >
-      <i class="fa-solid fa-calculator"></i> Calcola Dosi
-    </button>
+<!-- Bottone che apre il modale Contatti -->
+    <div class="flex items-center gap-3">
+      <button
+        type="button"
+        (click)="openContactModal()"
+        class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 text-black text-xs tracking-widest uppercase font-bold shadow-[0_0_20px_rgba(245,158,11,0.35)] hover:shadow-[0_0_30px_rgba(251,191,36,0.65)] hover:scale-105 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+      >
+        <i class="fa-solid fa-envelope text-black/80"></i>
+        Contattaci
+      </button>
+    </div>
 
   </div>
 </header>
@@ -498,3 +512,176 @@
 
 <!-- Modale Inclusa -->
 <app-modalericetta></app-modalericetta>
+
+
+<!-- ================= MODALE CONTATTI LUXURY (SOLO RECAPITI) ================= -->
+<div
+  *ngIf="isContactModalOpen"
+  class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+>
+  <!-- Backdrop scuro con sfocatura (chiude al click esterno) -->
+  <div
+    (click)="closeContactModal()"
+    class="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity animate-fadeIn"
+  ></div>
+
+  <!-- Contenitore Modale -->
+  <div
+    class="relative w-full max-w-md rounded-2xl bg-[#0D0A0B] border border-amber-500/40 shadow-[0_0_60px_rgba(245,158,11,0.2)] overflow-hidden z-10 animate-scaleIn"
+  >
+    <!-- Luce dorata superiore interna -->
+    <div class="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/20 via-transparent to-transparent pointer-events-none"></div>
+    <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-amber-300 to-transparent"></div>
+
+    <!-- Header del Modale -->
+    <div class="relative px-6 pt-6 pb-4 flex justify-between items-start border-b border-amber-500/15">
+      <div>
+        <span class="text-[10px] uppercase tracking-[0.25em] text-amber-400 font-semibold block mb-1">
+          Recapiti Diretti
+        </span>
+        <h3 class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200 bg-clip-text text-transparent tracking-wide">
+          Contatti Italsuini
+        </h3>
+      </div>
+
+      <!-- Bottone Chiudi (X) -->
+      <button
+        type="button"
+        (click)="closeContactModal()"
+        class="w-8 h-8 rounded-full bg-white/5 border border-amber-500/30 text-amber-300 hover:bg-amber-500 hover:text-black transition-all duration-300 flex items-center justify-center cursor-pointer"
+        aria-label="Chiudi modale"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Corpo del Modale -->
+    <div class="relative p-6 space-y-5">
+      
+      <!-- Sezione Email -->
+      <div class="space-y-2.5">
+        <span class="text-[10px] uppercase tracking-[0.2em] text-stone-400 font-semibold block px-1">
+          Indirizzi Email
+        </span>
+
+        <!-- Email 1: Il Guanciale Cesare -->
+        <a
+          href="mailto:ilguancialecesare@italsuini.it"
+          class="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.03] border border-amber-500/20 hover:border-amber-400/60 hover:bg-amber-500/10 transition-all duration-300 group"
+        >
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="w-9 h-9 rounded-lg bg-amber-500/15 border border-amber-500/40 flex items-center justify-center text-amber-400 shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-award text-sm"></i>
+            </div>
+            <div class="truncate">
+              <span class="text-[10px] uppercase tracking-wider text-amber-400/80 block">Linea Cesare</span>
+              <span class="text-sm font-medium text-stone-100 group-hover:text-amber-300 transition-colors truncate block">
+                ilguancialecesare&#64;italsuini.it
+              </span>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-500 group-hover:text-amber-400 transition-colors ml-2"></i>
+        </a>
+
+        <!-- Email 2: Ordini -->
+        <a
+          href="mailto:ordini@italsuini.it"
+          class="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.03] border border-amber-500/20 hover:border-amber-400/60 hover:bg-amber-500/10 transition-all duration-300 group"
+        >
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="w-9 h-9 rounded-lg bg-amber-500/15 border border-amber-500/40 flex items-center justify-center text-amber-400 shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-box-open text-sm"></i>
+            </div>
+            <div class="truncate">
+              <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Ufficio Commerciale & Ordini</span>
+              <span class="text-sm font-medium text-stone-100 group-hover:text-amber-300 transition-colors truncate block">
+                ordini&#64;italsuini.it
+              </span>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-500 group-hover:text-amber-400 transition-colors ml-2"></i>
+        </a>
+
+        <!-- Email 3: Amministrazione -->
+        <a
+          href="mailto:amministrazione@italsuini.it"
+          class="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.03] border border-amber-500/20 hover:border-amber-400/60 hover:bg-amber-500/10 transition-all duration-300 group"
+        >
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="w-9 h-9 rounded-lg bg-amber-500/15 border border-amber-500/40 flex items-center justify-center text-amber-400 shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-envelope text-sm"></i>
+            </div>
+            <div class="truncate">
+              <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Ufficio Amministrativo</span>
+              <span class="text-sm font-medium text-stone-100 group-hover:text-amber-300 transition-colors truncate block">
+                amministrazione&#64;italsuini.it
+              </span>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-500 group-hover:text-amber-400 transition-colors ml-2"></i>
+        </a>
+      </div>
+
+      <!-- Divisore sottile dorato -->
+      <div class="h-[1px] bg-gradient-to-r from-transparent via-amber-500/25 to-transparent"></div>
+
+      <!-- Sezione Telefoni -->
+      <div class="space-y-2.5">
+        <span class="text-[10px] uppercase tracking-[0.2em] text-stone-400 font-semibold block px-1">
+          Recapiti Telefonici
+        </span>
+
+        <!-- Numero Verde in evidenza -->
+        <a
+          href="tel:800933350"
+          class="flex items-center justify-between p-3.5 rounded-xl bg-gradient-to-r from-amber-500/15 via-amber-500/5 to-transparent border border-amber-400/40 hover:border-amber-300 transition-all duration-300 group shadow-[0_0_20px_rgba(245,158,11,0.1)]"
+        >
+          <div class="flex items-center gap-3.5">
+            <div class="w-9 h-9 rounded-lg bg-amber-400 text-black flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-[0_0_12px_rgba(251,191,36,0.5)]">
+              <i class="fa-solid fa-headset text-sm"></i>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-amber-300 font-semibold block">Numero Verde Gratuito</span>
+              <span class="text-base font-bold text-white group-hover:text-amber-200 transition-colors tracking-wider">
+                800 933 350
+              </span>
+            </div>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30 font-semibold">
+            Chiama
+          </span>
+        </a>
+
+        <!-- I due numeri fissi affiancati -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <a
+            href="tel:+390621800361"
+            class="flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/10 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300 group"
+          >
+            <div class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400 shrink-0 group-hover:border-amber-400/40">
+              <i class="fa-solid fa-phone text-xs"></i>
+            </div>
+            <div>
+              <span class="text-[9px] uppercase tracking-widest text-stone-400 block">Linea 1</span>
+              <span class="text-xs font-semibold text-stone-200 group-hover:text-amber-300 transition-colors">06.21800361</span>
+            </div>
+          </a>
+
+          <a
+            href="tel:+39062153563"
+            class="flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/10 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300 group"
+          >
+            <div class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400 shrink-0 group-hover:border-amber-400/40">
+              <i class="fa-solid fa-phone text-xs"></i>
+            </div>
+            <div>
+              <span class="text-[9px] uppercase tracking-widest text-stone-400 block">Linea 2</span>
+              <span class="text-xs font-semibold text-stone-200 group-hover:text-amber-300 transition-colors">06.2153563</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
