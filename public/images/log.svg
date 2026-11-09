@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="35 35 1220 620" class="logo-italsuini">
+  <!-- Corpo del maialino -->
+  <path fill="#F9D2E2" d="..." /> <!-- Inserisci il path del maialino -->
+  <path fill="#F2B8D0" d="..." /> <!-- Ombreggiatura maialino -->
+
+  <!-- Striscione -->
+  <path fill="#FFFFFF" d="..." /> <!-- Sfondo striscione -->
+
+  <!-- Lettere ITA (Verde) -->
+  <path fill="#009A49" d="..." />
+
+  <!-- Lettere LSU (Bianco + Contorno Blu) -->
+  <path fill="#FFFFFF" d="..." />
+  <path fill="#1B4388" d="..." />
+
+  <!-- Lettere INI (Rosso) -->
+  <path fill="#D61F14" d="..." />
+
+  <!-- Contorni principali e SRL -->
+  <path fill="#1B4388" d="..." />
+</svg>

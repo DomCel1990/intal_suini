@@ -10,13 +10,13 @@
   <!-- 2. Filetto superiore e inferiore metallico (riflesso di luce centrale) -->
   <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-amber-400/60 to-transparent"></div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-1 py-3.5 flex justify-between items-center relative z-10">
     
     <!-- Logo & Brand Valorizzati -->
     <a href="#" class="flex items-center gap-4 group cursor-pointer">
       <div class="relative p-1.5 rounded-xl bg-gradient-to-b from-amber-500/15 to-black border border-amber-400/40 group-hover:border-amber-300 transition-all duration-300 flex items-center justify-center shadow-[0_0_20px_rgba(245,158,11,0.15)] group-hover:shadow-[0_0_25px_rgba(245,158,11,0.35)]">
         <img
-          src="logo.webp"
+          src="italsuini-oro-solo-oro.png"
           alt="Logo Italsuini"
           class="h-14 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(251,191,36,0.45)] group-hover:scale-105 transition-transform duration-300"
         />
@@ -224,16 +224,62 @@
       </div>
     </div>
 
-    <!-- Card Visual Eroe con Glow -->
-    <div
-      class="aspect-[4/3] rounded-3xl bg-luxury-card luxury-glow-card overflow-hidden relative group"
-    >
-      <img
-        src="images/cards-image/guanciale_principale.jpg"
-        alt="Guanciale"
-        class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
-      />
-    </div>
+<!-- Colonna Destra: Carosello Galleria -->
+<div
+  class="aspect-[4/3] rounded-3xl bg-luxury-card luxury-glow-card overflow-hidden relative group select-none shadow-2xl"
+>
+  <!-- Badge "Galleria" in alto a sinistra -->
+  <div
+    class="absolute top-4 left-4 z-20 px-4 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-amber-500/30 flex items-center gap-2"
+  >
+    <i class="fa-solid fa-images text-amber-400 text-xs"></i>
+    <span class="text-amber-400 font-cinzel tracking-widest text-xs uppercase font-bold">
+      Galleria
+    </span>
+  </div>
+
+  <!-- Immagine Attiva del Carosello -->
+  <img
+    [src]="guancialeImages[currentSlide()]"
+    alt="Galleria Guanciale Cesare"
+    class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition-all duration-700"
+  />
+
+  <!-- Gradiente scuro in basso per dare risalto ai pallini di navigazione -->
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"
+  ></div>
+
+  <!-- Freccia Sinistra (visibile al passaggio del mouse) -->
+  <button
+    (click)="prevSlide()"
+    aria-label="Immagine precedente"
+    class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-xl bg-black/60 hover:bg-amber-500 text-amber-400 hover:text-black border border-amber-500/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+  >
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+
+  <!-- Freccia Destra (visibile al passaggio del mouse) -->
+  <button
+    (click)="nextSlide()"
+    aria-label="Immagine successiva"
+    class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-xl bg-black/60 hover:bg-amber-500 text-amber-400 hover:text-black border border-amber-500/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+  >
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+
+  <!-- Indicatori (Pallini) in basso -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+    @for (img of guancialeImages; track img; let i = $index) {
+      <button
+        (click)="currentSlide.set(i)"
+        [attr.aria-label]="'Vai all\'immagine ' + (i + 1)"
+        class="h-2 rounded-full transition-all duration-300 cursor-pointer"
+        [ngClass]="currentSlide() === i ? 'w-6 bg-amber-400' : 'w-2 bg-white/40 hover:bg-white/70'"
+      ></button>
+    }
+  </div>
+</div>
   </section>
 
 <!-- SEZIONE PROCESSO PRODUTTIVO -->
