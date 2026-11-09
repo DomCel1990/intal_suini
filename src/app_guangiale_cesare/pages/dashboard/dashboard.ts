@@ -5,10 +5,11 @@ import { Modalericetta } from '../../shared/components/modalericetta/modalericet
 import { Card } from '../../shared/components/card/card';
 import { Footer } from '../../shared/components/footer/footer';
 import { Timeline } from '../../shared/components/timeline/timeline';
+import { ParallaxDirective } from '../../shared/directives/parallax.directive';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule, Modalericetta, Card, Footer, Timeline],
+  imports: [CommonModule, Modalericetta, Card, Footer, Timeline, ParallaxDirective],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
@@ -17,11 +18,11 @@ export class Dashboard {
   state = inject(AppStateService);
 
   guancialeImages: string[] = [
-    'images/guanciale/guanciale-1.jpg',
     'images/guanciale/guanciale-2.jpg',
     'images/guanciale/guanciale-3.jpg',
     'images/guanciale/guanciale-4.jpg',
     'images/guanciale/guanciale-5.jpg',
+    'images/guanciale/guanciale-1.jpg',
   ];
 
   currentSlide = signal<number>(0);
