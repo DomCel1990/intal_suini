@@ -72,16 +72,15 @@
   <!-- HERO SECTION con sfondo parallax -->
   <section
     id="lux-hero"
-    [appParallax]="0.6"
+    [appParallax]="0.5"
     class="relative min-h-[70vh] flex items-center justify-center px-4 overflow-hidden border-b border-amber-500/10 scroll-mt-24"
   >
     <!-- Immagine di sfondo parallax (100px più alta sopra e sotto) -->
-    <div
-      data-parallax-layer
-      class="absolute inset-x-0 -top-[100px] -bottom-[100px] bg-cover bg-center will-change-transform"
-      style="background-image: url('images/guanciale/guanciale-1.jpg')"
-    ></div>
-
+<div
+  data-parallax-layer
+  class="absolute inset-x-0 -top-[100px] -bottom-[100px] bg-cover bg-center will-change-transform"
+  style="background-image: url('images/guanciale/foto-principale.webp'); transform: translateZ(0); backface-visibility: hidden;"
+></div>
     <!-- Overlay scuro + alone dorato -->
     <div
       class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-900/30 via-[#0A0809]/80 to-[#0A0809]/95 pointer-events-none"

@@ -28,20 +28,18 @@ export class ParallaxDirective implements AfterViewInit, OnDestroy {
     this.update();
   }
 
-  private update() {
+private update() {
     const r = this.host.nativeElement.getBoundingClientRect();
     const vh = window.innerHeight;
     const f = Number(this.appParallax);
 
-    // spazio extra sopra e sotto l'immagine, così non compaiono mai bordi vuoti
     const extra = Math.ceil(f * (vh / 2 + r.height / 2));
     this.layer.style.top = `-${extra}px`;
     this.layer.style.bottom = `-${extra}px`;
 
-    // 0 quando la fascia è al centro dello schermo.
-    // Scorrendo, l'immagine scende rispetto alla pagina (= più lenta).
     const center = r.top + r.height / 2;
-    const offset = (vh / 2 - center) * f;
+    const offset = Math.round((vh / 2 - center) * f); // <-- Aggiunto Math.round()
+
     this.layer.style.transform = `translate3d(0, ${offset}px, 0)`;
   }
 
