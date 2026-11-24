@@ -70,86 +70,99 @@
 
   <!-- HERO SECTION -->
   <!-- HERO SECTION con sfondo parallax -->
-  <section
-    id="lux-hero"
-    [appParallax]="0.4"
-    class="relative min-h-[70vh] flex items-center justify-center px-4 overflow-hidden border-b border-amber-500/10 scroll-mt-24"
-  >
-    <!-- Immagine di sfondo parallax (100px più alta sopra e sotto) -->
-<div
-  data-parallax-layer
-  class="absolute inset-x-0 -top-[100px] -bottom-[100px] bg-cover bg-center will-change-transform"
-  style="background-image: url('images/guanciale/foto-principale.webp'); transform: translateZ(0); backface-visibility: hidden;"
-></div>
-    <!-- Overlay scuro + alone dorato -->
-    <div
-      class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-900/30 via-[#0A0809]/80 to-[#0A0809]/95 pointer-events-none"
-    ></div>
+<!-- HERO SECTION con sfondo parallax -->
+<section
+  id="lux-hero"
+  [appParallax]="0.6"
+  class="relative min-h-[75vh] flex items-center justify-center px-4 overflow-hidden border-b border-amber-500/20 scroll-mt-24 bg-[#0A0809]"
+>
+  <!-- Immagine di sfondo parallax: colori naturali intatti, solo un filo di nitidezza -->
+  <div
+    data-parallax-layer
+    class="absolute inset-x-0 -top-[100px] -bottom-[100px] bg-cover bg-center will-change-transform contrast-[1.06]"
+    style="background-image: url('images/guanciale/guanciale_proca.jpg'); transform: translateZ(0); backface-visibility: hidden;"
+  ></div>
 
-    <div class="max-w-4xl mx-auto text-center relative z-10 space-y-6 py-16">
-      <div class="flex flex-col items-center justify-center space-y-4">
-        <img
-          src="logo.webp"
-          alt="Guanciale Cesare"
-          class="h-48 sm:h-[21rem] w-auto object-contain drop-shadow-[0_10px_20px_rgba(212,175,55,0.2)]"
-        />
-        <div
-          class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-cinzel uppercase tracking-widest"
-        >
-          <i class="fa-solid fa-gem"></i> L'Arte della Stagionatura Romana
-        </div>
-      </div>
-      <h1
-        class="text-4xl sm:text-6xl md:text-7xl font-cinzel font-extrabold tracking-tight luxury-gradient-text leading-normal pb-2 font-playfair italic"
-      >
-        L'Arte del Gusto Senza Tempo
-      </h1>
-      <div class="flex flex-wrap justify-center items-center gap-4 pt-4">
-        <a
-          href="#lux-catalog"
-          class="px-7 py-3 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 text-black font-semibold uppercase text-xs tracking-widest hover:opacity-90 shadow-xl transition"
-          >Esplora Collezione</a
-        >
-      </div>
+  <!-- 1. Sfumatura verticale NEUTRA (integra top e bottom senza alterare i colori al centro) -->
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-[#0A0809]/75 via-black/25 to-[#0A0809] pointer-events-none"
+  ></div>
+
+  <!-- 2. Vignettatura radiale NEUTRA (lascia respirare il guanciale al centro e scurisce fluidamente i bordi) -->
+  <div
+    class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.18)_0%,_rgba(10,8,9,0.52)_55%,_rgba(10,8,9,0.92)_100%)] pointer-events-none"
+  ></div>
+
+  <div class="max-w-4xl mx-auto text-center relative z-10 space-y-6 py-16">
+    <div class="flex flex-col items-center justify-center space-y-5">
+      <img
+        src="logo.webp"
+        alt="Guanciale Cesare"
+        class="h-48 sm:h-[21rem] w-auto object-contain drop-shadow-[0_10px_28px_rgba(0,0,0,0.95)]"
+      />
       <div
-        class="pt-6 flex justify-center items-center gap-4 text-xs text-gray-400"
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-amber-400/40 text-amber-300 text-xs font-cinzel uppercase tracking-widest shadow-[0_6px_20px_rgba(0,0,0,0.6)]"
       >
-        <span
-          class="uppercase tracking-widest text-[16px] text-amber-500/80 font-cinzel"
-          >Segui i nostri canali:</span
-        >
-        <div class="flex gap-3">
-          <a
-            href="https://www.instagram.com/il_guanciale_cesare/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-8 h-8 rounded-full bg-luxury-card border border-amber-500/30 flex items-center justify-center text-amber-400 hover:bg-amber-500 hover:text-black transition shadow"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/ilguancialecesare"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-8 h-8 rounded-full bg-luxury-card border border-amber-500/30 flex items-center justify-center text-amber-400 hover:bg-amber-500 hover:text-black transition shadow"
-            ><i class="fa-brands fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://www.tiktok.com/@guanciale.cesare?_r=1&_t=ZG-9BI4r0sSAXx"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-8 h-8 rounded-full bg-luxury-card border border-amber-500/30 flex items-center justify-center text-amber-400 hover:bg-amber-500 hover:text-black transition shadow"
-            ><i class="fa-brands fa-tiktok"></i
-          ></a>
-          <a
-            href="https://whatsapp.com"
-            target="_blank"
-            class="w-8 h-8 rounded-full bg-luxury-card border border-amber-500/30 flex items-center justify-center text-amber-400 hover:bg-amber-500 hover:text-black transition shadow"
-            ><i class="fa-brands fa-whatsapp"></i
-          ></a>
-        </div>
+        <i class="fa-solid fa-gem text-amber-400"></i> L'Arte della Stagionatura Romana
       </div>
     </div>
-  </section>
+
+    <h1
+      class="text-4xl sm:text-6xl md:text-7xl font-cinzel font-extrabold tracking-tight luxury-gradient-text leading-normal pb-2 font-playfair italic drop-shadow-[0_6px_22px_rgba(0,0,0,0.95)]"
+    >
+      L'Arte del Gusto Senza Tempo
+    </h1>
+
+    <div class="flex flex-wrap justify-center items-center gap-4 pt-3">
+      <a
+        href="#lux-catalog"
+        class="px-8 py-3.5 rounded-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-500 text-[#0A0809] font-bold uppercase text-xs tracking-widest border border-amber-200/40 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.75)] hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300"
+      >
+        Esplora Collezione
+      </a>
+    </div>
+
+    <div
+      class="pt-6 flex flex-wrap justify-center items-center gap-4 text-xs"
+    >
+      <span
+        class="uppercase tracking-widest text-[15px] text-amber-200/90 font-cinzel drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]"
+      >
+        Segui i nostri canali:
+      </span>
+      <div class="flex gap-3">
+        <a
+          href="https://www.instagram.com/il_guanciale_cesare/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-9 h-9 rounded-full bg-black/65 backdrop-blur-md border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-[0_4px_15px_rgba(0,0,0,0.65)] hover:bg-amber-400 hover:text-[#0A0809] hover:border-amber-300 hover:-translate-y-0.5 transition-all duration-300"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/ilguancialecesare"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-9 h-9 rounded-full bg-black/65 backdrop-blur-md border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-[0_4px_15px_rgba(0,0,0,0.65)] hover:bg-amber-400 hover:text-[#0A0809] hover:border-amber-300 hover:-translate-y-0.5 transition-all duration-300"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://www.tiktok.com/@guanciale.cesare?_r=1&_t=ZG-9BI4r0sSAXx"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-9 h-9 rounded-full bg-black/65 backdrop-blur-md border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-[0_4px_15px_rgba(0,0,0,0.65)] hover:bg-amber-400 hover:text-[#0A0809] hover:border-amber-300 hover:-translate-y-0.5 transition-all duration-300"
+          ><i class="fa-brands fa-tiktok"></i
+        ></a>
+        <a
+          href="https://whatsapp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-9 h-9 rounded-full bg-black/65 backdrop-blur-md border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-[0_4px_15px_rgba(0,0,0,0.65)] hover:bg-amber-400 hover:text-[#0A0809] hover:border-amber-300 hover:-translate-y-0.5 transition-all duration-300"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- PRODOTTO EROE (Con Calcolatore Rapido e Glow) -->
   <section
