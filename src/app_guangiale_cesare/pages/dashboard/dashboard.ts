@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { AppStateService } from '../../shared/services/app-state-service';
 import { CommonModule } from '@angular/common';
 import { Modalericetta } from '../../shared/components/modalericetta/modalericetta';
@@ -6,8 +6,6 @@ import { Card } from '../../shared/components/card/card';
 import { Footer } from '../../shared/components/footer/footer';
 import { Timeline } from '../../shared/components/timeline/timeline';
 import { ParallaxDirective } from '../../shared/directives/parallax.directive';
-import { ActivatedRoute } from '@angular/router';
-import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,36 +13,9 @@ import { Meta, Title } from '@angular/platform-browser';
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
-export class Dashboard implements OnInit{
+export class Dashboard {
   isContactModalOpen = false;
   state = inject(AppStateService);
-
-
-  private route = inject(ActivatedRoute);
-private title = inject(Title);
-private meta = inject(Meta);
-
-ngOnInit(): void {
-  this.route.data.subscribe((data) => {
-    if (data['title']) {
-      this.title.setTitle(data['title']);
-    }
-    if (data['description']) {
-      this.meta.updateTag({ name: 'description', content: data['description'] });
-    }
-    if (data['category']) {
-      this.state.setCategory(data['category']);
-    }
-    if (data['openContacts']) {
-      this.openContactModal();
-    }
-    if (data['section']) {
-      setTimeout(() => {
-        document.getElementById(data['section'])?.scrollIntoView({ behavior: 'smooth' });
-      }, 150);
-    }
-  });
-}
 
   guancialeImages: string[] = [
     'images/guanciale/guanciale-2.jpg',
